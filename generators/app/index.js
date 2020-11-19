@@ -26,14 +26,13 @@ module.exports = class extends Generator {
       "src/main.js",
       ".browserslistrc",
       ".eslintrc.js",
-      ".gitignore",
       "babel.config.js",
       "commitlint.config.js",
       "package.json",
       "README.md",
     ];
-    templates.forEach(item => {
-      this.fs.copyTpl(this.templatePath(item),this.destinationPath(item))
-    })
+    templates.forEach((item) => {
+      this.fs.copyTpl(this.templatePath(item), this.destinationPath(item));
+    });
   }
 };
